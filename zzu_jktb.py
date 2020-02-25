@@ -33,12 +33,18 @@ def login():
     r = session.post(login_url, headers=headers,data=post_data)
     r.encoding="utf-8"
     str = r.text
-    if str.find("登录失败") == None or str == None:
-        print("登录失败")
-        print(str)
+    if  str.find("parent.window.location=") == -1:
+        if str.find("密码输入错误") != -1:
+            print(str)
+            print("登录失败,请检查用户名或密码")
+        else:
+            print(str)
+            print("登录失败")
         exit()
-    print("登录成功！")
-    return str
+    else:
+        print("登录成功！")
+        return str
+
 
 
 def get_url(html):
@@ -55,10 +61,11 @@ def get_session(url):
     sid = sid_pattern.findall(url)[0]
     opid = opid_pattern.findall(url)[0]
     if sid == None:
+        print(url)
         print('会话获取失败')
-        print(str)
         exit()
-    return sid,opid
+    else:
+        return sid,opid
 
 def verify(verify_url,opid,sid):
 
@@ -86,11 +93,13 @@ def verify(verify_url,opid,sid):
     r.encoding="utf-8"
     str = r.text
 
-    if str.find('填写上报表格') == None:
-        print('填报失败')
+    if str.find('填写上报表格') == -1:
         print(str)
+        print('填报失败')
         exit()
-    return str
+    else:
+        return str
+
 
 def submit(opid,sid):
     url = 'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/getsomething?ptopid='+opid+'+&sid=' + sid
@@ -130,10 +139,12 @@ def report(opid,sid):
     r = requests.post(url, headers=headers,data=post_data)
     r.encoding="utf-8"
     str = r.text
-    if str.find('感谢您向学校上报健康状况！记着明天继续来报') ==None:
+    if str.find('感谢您向学校上报健康状况！记着明天继续来报') == -1:
         print(str)
+        print("填报失败")
     else:
         print('填报成功！')
+
 
 if __name__ == '__main__':
     print('登录....')
