@@ -146,7 +146,8 @@ def report(opid,sid):
         print('填报成功！')
 
 
-if __name__ == '__main__':
+
+def main():
     print('登录....')
     str = login()
     verify_url = get_url(str)
@@ -164,3 +165,10 @@ if __name__ == '__main__':
 
     report(opid,sid)
 
+
+if __name__ == '__main__':
+    schedule.every().day.at("08:53").do(main)
+    while True:
+        schedule.run_pending()
+
+        time.sleep(1)
