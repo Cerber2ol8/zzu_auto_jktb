@@ -54,3 +54,11 @@ schedule.every().day.at("08:53").do(main)
             'myvsw_3':  '否',    #11是否有外出       是/否
             'myvsw_5':  '在家学习', #12在家还在校         在家学习/在学校学习
             }
+            
+ 
+ 
+ 
+ 
+# 另外
+一个自动更新任务的小脚本
+https://github.com/Cerber2ol8/scripts_update
