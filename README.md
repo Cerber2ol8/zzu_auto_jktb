@@ -12,7 +12,7 @@
 
 需要自行安装几个必要依赖包
 
-$pip install lxml requests beautifulsoup4
+$pip install lxml requests beautifulsoup4 schedule
 
 当然你也可以只运行一次，填写好自己的数据和时间后
 
