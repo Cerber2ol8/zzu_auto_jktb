@@ -7,7 +7,7 @@ typora-root-url: ./
 
 12点钟还没起床的同学必备 ：）
 
-![GQPLJJ2D%9X7UW)9YX_@C@B](/GQPLJJ2D%9X7UW)9YX_@C@B.png)
+![image](https://raw.githubusercontent.com/Cerber2ol8/zzu_auto_jktb/master/GQPLJJ2D%259X7UW)9YX_%40C%40B.png)
 
 与计划任务一同食用更佳~
 
