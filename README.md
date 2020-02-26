@@ -1,6 +1,6 @@
 
 # zzu_auto_jktb
-郑州大学每日健康自动填报脚本
+# 郑州大学每日健康自动填报脚本
 
 12点钟还没起床的同学必备 ：）
 
@@ -59,6 +59,6 @@ schedule.every().day.at("08:53").do(main)
  
  
  
-# 另外
+#  另外
 一个自动更新任务的小脚本
 https://github.com/Cerber2ol8/scripts_update
