@@ -11,6 +11,7 @@ import json
 import requests
 import re
 import schedule
+import time
 from bs4 import BeautifulSoup
 login_url = "https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/login"
 #verify_url = "https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb"
