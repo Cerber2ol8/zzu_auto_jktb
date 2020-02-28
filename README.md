@@ -57,8 +57,10 @@ schedule.every().day.at("08:53").do(main)
             
  
  
- 
- 
+# 2020-02-28
+学校填报成页面更换关键词，已将检测的语句替换为新关键词
+
+
 #  另外
 一个自动更新任务的小脚本
 https://github.com/Cerber2ol8/scripts_update
