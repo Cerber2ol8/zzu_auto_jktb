@@ -139,7 +139,7 @@ def report(opid,sid):
     r = requests.post(url, headers=headers,data=post_data)
     r.encoding="utf-8"
     str = r.text
-    if str.find('感谢您向学校上报健康状况！记着明天继续来报') == -1:
+    if str.find('感谢您你今日上报健康状况！') == -1:
         print(str)
         print("填报失败")
     else:
