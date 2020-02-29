@@ -116,7 +116,7 @@ def report(opid,sid):
     host = 'jksb.v.zzu.edu.cn'
     headers = {'User-Agent':user_agent,
            'Host':host}
-    data = {'myvsp_5':  '正常'   #1今日身体状况
+    data = {'myvsp_5':  '正常',   #1今日身体状况
             'myvs_1':   '是',    #2体温是否正常     是/否
             'myvs_2':   '否',    #3是否有咳嗽       是/否
             'myvs_3':   '否',    #4否有乏力症状     是/否
